@@ -29,6 +29,31 @@ a {
 
 
 /* =====================================
+IDENTITY
+===================================== */
+
+.identity {
+  display:flex;
+  align-items:center;
+  gap:13px;
+  color:#587614;
+  font:500 .73rem "DM Mono",monospace;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.identity strong {
+  color:var(--ink);
+  font-weight:700;
+}
+
+.identity span {
+  padding-left:13px;
+  border-left:1px solid #a7b29c;
+}
+
+
+/* =====================================
 HEADER
 ===================================== */
 
@@ -96,31 +121,6 @@ h2,
 h3,
 p {
   margin-top:0;
-}
-
-
-/* =====================================
-IDENTITY
-===================================== */
-
-.identity {
-  display:flex;
-  align-items:center;
-  gap:13px;
-  color:#587614;
-  font:500 .73rem "DM Mono",monospace;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.identity strong {
-  color:var(--ink);
-  font-weight:700;
-}
-
-.identity span {
-  padding-left:13px;
-  border-left:1px solid #a7b29c;
 }
 
 
@@ -350,6 +350,11 @@ PROJECT CARDS
   background:#d9ff54;
 }
 
+
+/* =====================================
+PROJECT CONTENT
+===================================== */
+
 .project-content {
   padding:46px;
   display:flex;
@@ -454,9 +459,13 @@ PROJECT OUTCOME
 ===================================== */
 
 .project-outcome {
-  margin-top:80px;
-  padding-top:30px;
+  margin-top:110px;
+  padding-top:50px;
   border-top:1px solid var(--line);
+}
+
+.project-outcome .section-label {
+  margin-bottom:30px;
 }
 
 .project-outcome p:not(.section-label) {
@@ -464,16 +473,29 @@ PROJECT OUTCOME
   color:var(--muted);
   font-size:1rem;
   line-height:1.7;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
 
 /* =====================================
-JOURNEY SECTION
+JOURNEY / EXPERIENCE SECTION
 ===================================== */
 
+/* 
+This keeps Experience & Education
+in the same original two-column layout
+*/
+
 .journey {
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:70px;
   padding-top:90px;
+  border-top:1px solid var(--line);
+}
+
+.timeline {
+  width:100%;
 }
 
 .timeline article {
@@ -560,7 +582,8 @@ MOBILE RESPONSIVE
 
   .split-section,
   .project-card,
-  .insights {
+  .insights,
+  .journey {
     grid-template-columns:1fr;
     gap:30px;
   }
@@ -592,6 +615,11 @@ MOBILE RESPONSIVE
 
   .insights li span {
     width:42px;
+  }
+
+  .project-outcome {
+    margin-top:80px;
+    padding-top:40px;
   }
 
 }
