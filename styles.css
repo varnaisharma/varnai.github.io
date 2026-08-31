@@ -481,21 +481,31 @@ PROJECT OUTCOME
 JOURNEY / EXPERIENCE SECTION
 ===================================== */
 
-/* 
-This keeps Experience & Education
-in the same original two-column layout
-*/
-
 .journey {
-  display:grid;
-  grid-template-columns:1fr 2fr;
-  gap:70px;
-  padding-top:90px;
+  max-width:1240px;
+  margin:0 auto;
+  padding:90px 28px 112px;
+  display:grid !important;
+  grid-template-columns:280px minmax(0, 1fr);
+  column-gap:100px;
+  align-items:start;
   border-top:1px solid var(--line);
 }
 
-.timeline {
+/* Keep Experience & Education heading on left */
+
+.journey > .section-label {
+  grid-column:1;
+  grid-row:1;
+}
+
+/* Move timeline to the middle/right column */
+
+.journey > .timeline {
+  grid-column:2 !important;
+  grid-row:1;
   width:100%;
+  margin:0;
 }
 
 .timeline article {
