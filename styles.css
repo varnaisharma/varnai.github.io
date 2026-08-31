@@ -453,13 +453,8 @@ Cyclistic → Bellabeat
   margin-top:100px;
 }
 
-/* =====================================
-PROJECT DETAILS
-===================================== */
-
-.project-details {
-  width: 76%;
-  margin: 80px 0 0 auto;
+.project-card {
+  width: 100%;
 }
 
 /* =====================================
@@ -467,9 +462,9 @@ PROJECT OUTCOME
 ===================================== */
 
 .project-outcome {
-  margin-top:110px;
-  padding-top:50px;
-  border-top:1px solid var(--line);
+  margin-top: 80px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
 }
 
 .project-outcome .section-label {
