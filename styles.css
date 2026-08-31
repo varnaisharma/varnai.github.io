@@ -647,3 +647,47 @@ footer h2 {
   }
 
 }
+
+/* =====================================
+   FINAL ALIGNMENT FIX
+===================================== */
+
+.project-outcome {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.insights {
+  width: 100% !important;
+  margin: 70px 0 0 0 !important;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 40px;
+}
+
+.insights > .section-label {
+  margin: 0;
+  padding-top: 2px;
+}
+
+.insights ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.insights li {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+}
+
+.insights li span {
+  display: block;
+  color: #6e7d73;
+  font: 400 0.68rem "DM Mono", monospace;
+}
