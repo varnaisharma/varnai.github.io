@@ -439,21 +439,21 @@ h2 {
 }
 
 .insights li {
-  position:relative;
-  padding:18px 0 18px 85px;
-  border-top:1px solid var(--line);
-  font-size:1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
 }
 
 .insights li span {
-  position:absolute;
-  left:0;
-  top:18px;
-  width:65px;
-  color:#6e7d73;
-  font:400 .68rem "DM Mono",monospace;
+  flex: 0 0 65px;
+  width: 65px;
+  color: #6e7d73;
+  font: 400 .68rem "DM Mono", monospace;
+  padding-top: 4px;
 }
-
 
 /* ================================
    PROJECT NOTES
@@ -601,6 +601,11 @@ footer h2 {
   padding-left:60px;
 }
 
+.insights li {
+  gap: 15px;
+}
+
 .insights li span {
-  width:42px;
+  flex: 0 0 42px;
+  width: 42px;
 }
