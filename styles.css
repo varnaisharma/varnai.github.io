@@ -636,3 +636,54 @@ MOBILE RESPONSIVE
   }
 
 }
+
+/* =====================================
+   ALIGN PROJECT OUTCOME & KEY INSIGHTS
+===================================== */
+
+.project-outcome,
+.insights {
+  width: 76%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+
+/* =====================================
+   CENTER EXPERIENCE & EDUCATION CONTENT
+===================================== */
+
+.journey {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  column-gap: 70px;
+}
+
+.journey .timeline {
+  width: 76%;
+  justify-self: center;
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 720px) {
+
+  .project-outcome,
+  .insights {
+    width: 100%;
+  }
+
+  .journey {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .journey .timeline {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+}
