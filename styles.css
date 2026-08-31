@@ -439,16 +439,19 @@ h2 {
 }
 
 .insights li {
-  padding: 18px 0;
-  border-top: 1px solid var(--line);
-  font-size: 1rem;
+  position:relative;
+  padding:18px 0 18px 85px;
+  border-top:1px solid var(--line);
+  font-size:1rem;
 }
 
 .insights li span {
-  display: inline-block;
-  width: 65px;
-  color: #6e7d73;
-  font: 400 0.68rem "DM Mono", monospace;
+  position:absolute;
+  left:0;
+  top:18px;
+  width:65px;
+  color:#6e7d73;
+  font:400 .68rem "DM Mono",monospace;
 }
 
 
@@ -594,8 +597,10 @@ footer h2 {
     padding: 30px;
   }
 
-  .insights li span {
-    width: 42px;
-  }
+  .insights li {
+  padding-left:60px;
+}
 
+.insights li span {
+  width:42px;
 }
