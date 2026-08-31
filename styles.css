@@ -639,3 +639,40 @@ footer h2 {
   }
 
 }
+
+/* =====================================
+   FINAL KEY INSIGHTS ALIGNMENT
+===================================== */
+
+.insights {
+  margin: 70px 0 0 0;
+  width: 100%;
+  display: block;
+}
+
+.insights .section-label {
+  margin-bottom: 28px;
+}
+
+.insights ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.insights li {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  column-gap: 20px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+}
+
+.insights li span {
+  display: block;
+  width: auto;
+  color: #6e7d73;
+  font: 400 .68rem "DM Mono", monospace;
+}
