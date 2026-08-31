@@ -399,16 +399,15 @@ h2 {
 }
 
 
-/* ================================
+/* =====================================
    PROJECT OUTCOME
-   STARTS FROM LEFT
-================================ */
+===================================== */
 
 .project-outcome {
-  width: 100%;
   margin-top: 80px;
   padding-top: 30px;
   border-top: 1px solid var(--line);
+  width: 100%;
 }
 
 .project-outcome p:not(.section-label) {
@@ -420,27 +419,22 @@ h2 {
 }
 
 
-/* ================================
+/* =====================================
    KEY INSIGHTS
-   STARTS FROM LEFT
-================================ */
+===================================== */
 
 .insights {
-  margin: 70px 0 0 auto;
-  width: 76%;
-  display: block;
-}
-
-.insights .section-label {
-  display: block;
-  margin: 0 0 35px 0;
+  width: 100%;
+  margin: 70px 0 0 0;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 45px;
 }
 
 .insights ol {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 100%;
 }
 
 .insights li {
@@ -457,23 +451,12 @@ h2 {
   width: auto;
   color: #6e7d73;
   font: 400 .68rem "DM Mono", monospace;
-  padding-top: 4px;
-}
-
-/* ================================
-   PROJECT NOTES
-================================ */
-
-.note {
-  color: #6e7b73;
-  font-size: 0.75rem;
-  margin-top: 22px;
 }
 
 
-/* ================================
+/* =====================================
    SPACE BETWEEN PROJECTS
-================================ */
+===================================== */
 
 .note + .project-card {
   margin-top: 100px;
