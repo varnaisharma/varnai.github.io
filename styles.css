@@ -6,10 +6,9 @@
   --line: #d7dbd3;
 }
 
-
-/* ================================
+/* =====================================
    GLOBAL
-================================ */
+===================================== */
 
 * {
   box-sizing: border-box;
@@ -32,17 +31,35 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
+
+/* =====================================
+   IDENTITY
+===================================== */
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #587614;
+  font: 500 0.73rem "DM Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.identity strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.identity span {
+  padding-left: 13px;
+  border-left: 1px solid #a7b29c;
 }
 
 
-/* ================================
+/* =====================================
    HEADER
-================================ */
+===================================== */
 
 .site-header {
   height: 84px;
@@ -79,9 +96,9 @@ nav a:hover,
 }
 
 
-/* ================================
+/* =====================================
    GENERAL SECTIONS
-================================ */
+===================================== */
 
 section,
 footer {
@@ -90,6 +107,18 @@ footer {
   padding: 112px 28px;
 }
 
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+  min-height: 690px;
+  padding-top: 120px;
+  position: relative;
+}
+
+.eyebrow,
 .section-label,
 .project-type,
 .date {
@@ -98,35 +127,15 @@ footer {
   text-transform: uppercase;
 }
 
-
-/* ================================
-   HERO
-================================ */
-
-.hero {
-  min-height: 690px;
-  padding-top: 120px;
-  position: relative;
-}
-
-.identity {
-  display: flex;
-  align-items: center;
-  gap: 13px;
+.eyebrow {
   color: #587614;
-  font: 500 0.73rem "DM Mono", monospace;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
-.identity strong {
-  color: var(--ink);
-  font-weight: 700;
-}
-
-.identity span {
-  padding-left: 13px;
-  border-left: 1px solid #a7b29c;
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
 h1 {
@@ -186,9 +195,9 @@ h1 em {
 }
 
 
-/* ================================
+/* =====================================
    ABOUT
-================================ */
+===================================== */
 
 .split-section {
   display: grid;
@@ -211,9 +220,9 @@ h2 {
 }
 
 
-/* ================================
+/* =====================================
    SKILLS
-================================ */
+===================================== */
 
 .skills-section {
   background: var(--ink);
@@ -260,9 +269,9 @@ h2 {
 }
 
 
-/* ================================
+/* =====================================
    PROJECTS
-================================ */
+===================================== */
 
 .projects-section {
   padding-bottom: 95px;
@@ -271,7 +280,7 @@ h2 {
 .section-heading {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   margin-bottom: 53px;
 }
 
@@ -281,12 +290,11 @@ h2 {
 }
 
 
-/* ================================
+/* =====================================
    PROJECT CARD
-================================ */
+===================================== */
 
 .project-card {
-  width: 100%;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   background: #e5eadc;
@@ -346,11 +354,16 @@ h2 {
   background: #d9ff54;
 }
 
+
+/* =====================================
+   PROJECT CONTENT
+===================================== */
+
 .project-content {
   padding: 46px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
 }
 
 .project-type {
@@ -369,6 +382,11 @@ h2 {
   max-width: 410px;
 }
 
+
+/* =====================================
+   PROJECT TAGS
+===================================== */
+
 .tags {
   margin: 12px 0 25px;
   display: flex;
@@ -384,13 +402,17 @@ h2 {
   font: 500 0.68rem "DM Mono", monospace;
 }
 
+
+/* =====================================
+   PROJECT LINKS
+===================================== */
+
 .project-links {
   display: flex;
   gap: 19px;
   margin-top: auto;
   font-size: 0.85rem;
   font-weight: 800;
-  flex-wrap: wrap;
 }
 
 .project-links a {
@@ -404,10 +426,10 @@ h2 {
 ===================================== */
 
 .project-outcome {
+  width: 100%;
   margin-top: 80px;
   padding-top: 30px;
   border-top: 1px solid var(--line);
-  width: 100%;
 }
 
 .project-outcome p:not(.section-label) {
@@ -428,7 +450,12 @@ h2 {
   margin: 70px 0 0 0;
   display: grid;
   grid-template-columns: 180px 1fr;
-  gap: 45px;
+  gap: 40px;
+}
+
+.insights > .section-label {
+  margin: 0;
+  padding-top: 2px;
 }
 
 .insights ol {
@@ -440,7 +467,7 @@ h2 {
 .insights li {
   display: grid;
   grid-template-columns: 65px 1fr;
-  column-gap: 20px;
+  gap: 20px;
   padding: 18px 0;
   border-top: 1px solid var(--line);
   font-size: 1rem;
@@ -448,9 +475,19 @@ h2 {
 
 .insights li span {
   display: block;
-  width: auto;
   color: #6e7d73;
-  font: 400 .68rem "DM Mono", monospace;
+  font: 400 0.68rem "DM Mono", monospace;
+}
+
+
+/* =====================================
+   PROJECT NOTE
+===================================== */
+
+.note {
+  color: #6e7b73;
+  font-size: 0.75rem;
+  margin-top: 22px;
 }
 
 
@@ -463,16 +500,26 @@ h2 {
 }
 
 
-/* ================================
-   EXPERIENCE
-================================ */
+/* =====================================
+   EXPERIENCE & EDUCATION
+===================================== */
 
 .journey {
-  padding-top: 90px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 90px 28px 112px;
+}
+
+.journey > .section-label {
+  width: 76%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
 }
 
 .timeline {
-  width: 100%;
+  width: 76%;
+  margin: 0 auto;
 }
 
 .timeline article {
@@ -497,9 +544,9 @@ h2 {
 }
 
 
-/* ================================
+/* =====================================
    FOOTER
-================================ */
+===================================== */
 
 footer {
   background: var(--lime);
@@ -530,9 +577,9 @@ footer h2 {
 }
 
 
-/* ================================
-   MOBILE
-================================ */
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
 
 @media (max-width: 720px) {
 
@@ -558,8 +605,7 @@ footer h2 {
   }
 
   .split-section,
-  .project-card,
-  .insights {
+  .project-card {
     grid-template-columns: 1fr;
     gap: 30px;
   }
@@ -586,14 +632,18 @@ footer h2 {
   }
 
   .insights {
-  width: 100%;
-}
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-.insights li {
-  grid-template-columns: 42px 1fr;
-  column-gap: 15px;
-}
+  .insights li {
+    grid-template-columns: 42px 1fr;
+    gap: 12px;
+  }
 
-.insights li span {
-  width: auto;
+  .journey > .section-label,
+  .timeline {
+    width: 100%;
+  }
+
 }
