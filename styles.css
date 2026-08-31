@@ -476,7 +476,6 @@ PROJECT OUTCOME
   margin-bottom:20px;
 }
 
-
 /* =====================================
 JOURNEY / EXPERIENCE SECTION
 ===================================== */
@@ -485,28 +484,24 @@ JOURNEY / EXPERIENCE SECTION
   max-width:1240px;
   margin:0 auto;
   padding:90px 28px 112px;
-  display:grid !important;
-  grid-template-columns:280px minmax(0, 1fr);
-  column-gap:100px;
-  align-items:start;
   border-top:1px solid var(--line);
 }
 
-/* Keep Experience & Education heading on left */
+/* Keep heading on the left */
 
 .journey > .section-label {
-  grid-column:1;
-  grid-row:1;
+  width:28%;
 }
 
-/* Move timeline to the middle/right column */
+/* Move experience timeline toward the middle */
 
 .journey > .timeline {
-  grid-column:2 !important;
-  grid-row:1;
-  width:100%;
-  margin:0;
+  width:66%;
+  margin-left:34%;
+  margin-top:-30px;
 }
+
+/* Timeline entries */
 
 .timeline article {
   padding:0 0 21px;
@@ -528,6 +523,7 @@ JOURNEY / EXPERIENCE SECTION
   color:#708717;
   margin:0;
 }
+
 
 
 /* =====================================
@@ -592,8 +588,7 @@ MOBILE RESPONSIVE
 
   .split-section,
   .project-card,
-  .insights,
-  .journey {
+  .insights {
     grid-template-columns:1fr;
     gap:30px;
   }
@@ -630,6 +625,14 @@ MOBILE RESPONSIVE
   .project-outcome {
     margin-top:80px;
     padding-top:40px;
+  }
+
+  /* Experience section mobile alignment */
+
+  .journey > .timeline {
+    width:100%;
+    margin-left:0;
+    margin-top:30px;
   }
 
 }
