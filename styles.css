@@ -412,10 +412,10 @@ KEY INSIGHTS
 ===================================== */
 
 .insights {
-  margin:70px 0 0 auto;
-  width:76%;
-  display:grid;
-  grid-template-columns:180px 1fr;
+  margin: 70px 0 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 180px 1fr;
 }
 
 .insights ol {
@@ -453,6 +453,14 @@ Cyclistic → Bellabeat
   margin-top:100px;
 }
 
+/* =====================================
+PROJECT DETAILS
+===================================== */
+
+.project-details {
+  width: 76%;
+  margin: 80px 0 0 auto;
+}
 
 /* =====================================
 PROJECT OUTCOME
