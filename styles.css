@@ -687,3 +687,47 @@ footer h2 {
   color: #6e7d73;
   font: 400 .68rem "DM Mono", monospace;
 }
+
+/* =====================================
+   FINAL EXPERIENCE & EDUCATION ALIGNMENT
+===================================== */
+
+/* Main Experience section */
+#experience.journey {
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding: 90px 28px 112px !important;
+}
+
+/* Align 04 / Experience & education with Project Outcome */
+#experience.journey > .section-label {
+  width: 100% !important;
+  margin: 0 0 50px 0 !important;
+  padding: 0 !important;
+}
+
+/* Center the Experience & Education content */
+#experience.journey > .timeline {
+  width: 76% !important;
+  max-width: 900px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Timeline entries */
+#experience.journey > .timeline article {
+  width: 100% !important;
+  padding: 0 0 21px 0 !important;
+  margin-bottom: 22px !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  #experience.journey > .timeline {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
