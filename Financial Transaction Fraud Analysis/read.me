@@ -1,0 +1,323 @@
+# Financial Transaction Fraud Analysis
+
+## PaySecure — Fraud Risk & Transaction Monitoring
+
+> **Business Analyst Case Study | Financial Transaction Risk & Fraud Pattern Analysis**
+
+---
+
+## Project Overview
+
+This project evaluates financial transaction activity and fraud exposure for **PaySecure**, a fictional digital financial services company.
+
+The analysis focuses on identifying fraud patterns across transaction types, transaction values, and time periods, while evaluating the effectiveness of the existing fraud-monitoring process.
+
+The objective is to translate transaction data into actionable business insights that can help PaySecure strengthen fraud detection, improve risk prioritisation, and optimise investigation workflows.
+
+---
+
+## Business Problem
+
+PaySecure's existing transaction-monitoring process relies on predefined fraud-flagging rules. However, a significant proportion of simulated fraudulent transactions may not be captured by the existing monitoring mechanism.
+
+The business needs to understand:
+
+- Where is fraud most concentrated?
+- Which transaction types present the highest risk?
+- Does fraud risk vary by transaction amount?
+- Are there identifiable time-based patterns?
+- How effective is the existing fraud-flagging mechanism?
+- How much fraudulent activity is being missed?
+- How can transaction-monitoring rules be improved?
+
+---
+
+## Project Objectives
+
+The analysis was designed to:
+
+1. Assess overall transaction and fraud exposure.
+2. Identify high-risk transaction types.
+3. Analyse fraud patterns across transaction-value bands.
+4. Examine fraud activity across different hours and time periods.
+5. Evaluate the effectiveness of the existing fraud-flagging mechanism.
+6. Identify missed fraudulent transactions.
+7. Develop data-driven recommendations for improved transaction monitoring.
+8. Support a risk-based approach to fraud investigation and prioritisation.
+
+---
+
+## Dataset
+
+The project uses the **PaySim synthetic mobile-money transaction dataset**.
+
+The dataset contains approximately **6.36 million transactions** across a simulated 30-day period.
+
+### Key characteristics
+
+- Approximately 6.36 million transactions
+- 30 days of simulated activity
+- 744 hourly time steps
+- 5 transaction types
+- Simulated fraud indicators
+- Transaction amounts and balance information
+- Existing fraud-flagging indicator
+
+### Transaction Types
+
+- CASH-IN
+- CASH-OUT
+- DEBIT
+- PAYMENT
+- TRANSFER
+
+### Key Columns
+
+| Column | Description |
+|---|---|
+| `step` | Simulated time step |
+| `type` | Transaction type |
+| `amount` | Transaction amount |
+| `nameOrig` | Originating account |
+| `oldbalanceOrg` | Originating account balance before transaction |
+| `newbalanceOrig` | Originating account balance after transaction |
+| `nameDest` | Destination account |
+| `oldbalanceDest` | Destination account balance before transaction |
+| `newbalanceDest` | Destination account balance after transaction |
+| `isFraud` | Simulated fraud indicator |
+| `isFlaggedFraud` | Existing fraud-monitoring flag |
+
+> **Note:** PaySim is a synthetic dataset and does not contain real customer transaction data.
+
+---
+
+## Tools & Technologies
+
+### SQL
+Used for:
+
+- Data quality checks
+- Transaction profiling
+- Fraud exposure analysis
+- Fraud analysis by transaction type
+- Fraud amount analysis
+- Monitoring effectiveness
+- Missed-fraud analysis
+- Time-based analysis
+
+### Python
+Used for:
+
+- Exploratory data analysis
+- Data validation
+- Statistical summaries
+- Fraud-pattern exploration
+- Data visualisation
+
+### Power BI
+Used to develop the interactive business intelligence dashboard, including:
+
+- KPI cards
+- Fraud-rate analysis
+- Fraud-value analysis
+- Transaction-type comparisons
+- Amount-band analysis
+- Hourly fraud trends
+- Monitoring effectiveness analysis
+- Interactive filtering
+
+---
+
+## Analytical Approach
+
+The project followed a structured Business Analytics workflow.
+
+### 1. Data Quality & Validation
+
+The dataset was reviewed for:
+
+- Missing values
+- Data types
+- Transaction structure
+- Fraud indicators
+- Data consistency
+
+### 2. Transaction & Fraud Exposure
+
+Key metrics were calculated to understand:
+
+- Total transaction volume
+- Fraudulent transaction volume
+- Overall fraud rate
+- Total transaction value
+- Fraudulent transaction value
+- Average fraudulent transaction amount
+
+### 3. Transaction-Type Analysis
+
+Fraud activity was compared across:
+
+- CASH-IN
+- CASH-OUT
+- DEBIT
+- PAYMENT
+- TRANSFER
+
+This helped identify transaction types requiring greater monitoring attention.
+
+### 4. Transaction Amount Analysis
+
+Transactions were grouped into value bands to evaluate whether fraud risk changes with transaction size.
+
+### 5. Time-Based Analysis
+
+Fraud activity was analysed by:
+
+- Hour of day
+- Time period
+- Transaction activity patterns
+
+### 6. Monitoring Effectiveness
+
+The existing fraud-monitoring flag was evaluated using:
+
+- True Positives
+- False Negatives
+- False Positives
+- True Negatives
+- Detection Rate
+- Missed Fraud Rate
+
+### 7. Business Recommendations
+
+The findings were translated into recommendations for:
+
+- Risk-based monitoring
+- Transaction prioritisation
+- Fraud-rule enhancement
+- Investigation workflows
+
+---
+
+## Key Insights
+
+### 01 — Transfer transactions represent a key fraud-risk area
+
+**TRANSFER transactions demonstrated the highest fraud rate**, making them a priority area for enhanced transaction monitoring and risk-based controls.
+
+### 02 — Fraud is concentrated in specific transaction types
+
+Fraudulent activity is concentrated primarily within **TRANSFER and CASH-OUT transactions**, highlighting money-outflow activity as an important area of fraud risk.
+
+### 03 — Existing monitoring misses substantial simulated fraud
+
+The existing fraud-flagging mechanism captures only a small proportion of simulated fraudulent transactions, resulting in a substantial number of missed fraud cases.
+
+This indicates an opportunity to improve the existing monitoring approach.
+
+### 04 — Risk-based monitoring can improve investigation efficiency
+
+Fraud exposure is not evenly distributed across transactions. Prioritising transactions according to factors such as transaction type, transaction value, and behavioural patterns can help focus investigation resources on higher-risk activity.
+
+---
+
+## Power BI Dashboard
+
+The Power BI dashboard provides an interactive view of the analysis and is structured around three analytical areas:
+
+### Fraud Risk Overview
+
+Provides an executive-level summary of:
+
+- Total transactions
+- Fraudulent transactions
+- Fraud rate
+- Total transaction value
+- Fraud value
+- Average fraud amount
+- Fraud rate by transaction type
+- Fraud value by transaction type
+- Fraud trends over time
+
+### Fraud Patterns & Risk Drivers
+
+Explores:
+
+- Fraud by transaction type
+- Fraud by transaction amount
+- Hourly fraud patterns
+- Time-period patterns
+- Transaction-type distributions
+- Concentration of fraudulent activity
+
+### Monitoring Effectiveness
+
+Evaluates:
+
+- True positives
+- False negatives
+- False positives
+- Detection rate
+- Missed fraud rate
+- Missed fraud by transaction type
+- Missed fraudulent transaction value
+
+---
+
+## Recommended Fraud-Monitoring Improvements
+
+Based on the analysis, PaySecure could strengthen its monitoring framework by:
+
+### 1. Prioritising high-risk transaction types
+
+Apply enhanced monitoring to transaction types demonstrating elevated fraud rates, particularly **TRANSFER and CASH-OUT** activity.
+
+### 2. Introduce transaction-risk thresholds
+
+Use transaction amount bands as one factor in determining the priority of transactions for review.
+
+### 3. Move toward risk-based prioritisation
+
+Instead of treating every transaction equally, assign transactions different levels of monitoring priority based on multiple risk indicators.
+
+### 4. Improve missed-fraud detection
+
+Review existing rules responsible for generating fraud flags and identify scenarios where fraudulent transactions are not being captured.
+
+### 5. Optimise investigation workflows
+
+Prioritise high-risk transactions for manual investigation while reducing unnecessary review of lower-risk activity.
+
+---
+
+## Project Outcome
+
+The analysis evaluated transaction activity, fraud exposure, and the effectiveness of the existing fraud-monitoring process across transaction types, values, and time periods.
+
+The findings revealed that fraud risk is concentrated within specific transaction types, particularly **TRANSFER and CASH-OUT activity**, while the existing flagging mechanism identifies only a small proportion of fraudulent transactions.
+
+These findings highlight an opportunity for PaySecure to strengthen its fraud-monitoring process through **risk-based transaction rules, improved prioritisation, and more effective investigation workflows**.
+
+---
+
+## Repository Structure
+
+```text
+Financial-Transaction-Fraud-Analysis/
+│
+├── data/
+│   └── paysim_transactions.csv
+│
+├── sql/
+│   └── fraud_analysis.sql
+│
+├── python/
+│   └── fraud_analysis.ipynb
+│
+├── powerbi/
+│   └── Financial_Transaction_Fraud_Analysis.pbix
+│
+├── images/
+│   └── dashboard.png
+│
+└── README.md
