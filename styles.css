@@ -7,7 +7,7 @@
 }
 
 /* =====================================
-   GLOBAL
+GLOBAL
 ===================================== */
 
 * {
@@ -43,7 +43,7 @@ img {
 }
 
 /* =====================================
-   HEADER
+HEADER
 ===================================== */
 
 .site-header {
@@ -81,7 +81,7 @@ nav a:hover,
 }
 
 /* =====================================
-   GENERAL SECTIONS
+GENERAL SECTIONS
 ===================================== */
 
 section,
@@ -92,7 +92,7 @@ footer {
 }
 
 /* =====================================
-   IDENTITY AND LABELS
+IDENTITY AND LABELS
 ===================================== */
 
 .identity,
@@ -127,7 +127,7 @@ footer {
 }
 
 /* =====================================
-   HERO
+HERO
 ===================================== */
 
 .hero {
@@ -193,7 +193,7 @@ h1 em {
 }
 
 /* =====================================
-   ABOUT
+ABOUT
 ===================================== */
 
 .split-section {
@@ -217,7 +217,7 @@ h2 {
 }
 
 /* =====================================
-   SKILLS
+SKILLS
 ===================================== */
 
 .skills-section {
@@ -265,7 +265,7 @@ h2 {
 }
 
 /* =====================================
-   PROJECTS SECTION
+PROJECTS SECTION
 ===================================== */
 
 .projects-section {
@@ -285,21 +285,22 @@ h2 {
 }
 
 /* =====================================
-   PROJECT CARD
+PROJECT CARD
 ===================================== */
 
 .project-card {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  width: 100%;
-  min-height: 470px;
-  background: #e5eadc;
   align-items: stretch;
+  background: #e5eadc;
+  min-height: 470px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .project-visual {
-  min-width: 0;
-  min-height: 330px;
+  min-height: 470px;
+  height: 100%;
   background: #f4f4f1;
   overflow: hidden;
   position: relative;
@@ -307,11 +308,12 @@ h2 {
 }
 
 .project-content {
-  min-width: 0;
+  min-height: 470px;
   padding: 46px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .project-type {
@@ -335,13 +337,11 @@ DASHBOARD PREVIEW
 ===================================== */
 
 .project-dashboard {
-  position: relative;
-  min-height: 470px;
   background: #f4f4f1;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  height: 100%;
+  min-height: 470px;
 }
 
 .dashboard-link {
@@ -350,8 +350,12 @@ DASHBOARD PREVIEW
   width: 100%;
   height: 100%;
   min-height: 470px;
-  overflow: hidden;
 }
+
+/*
+The dashboard now fills the complete left side
+of the project card instead of appearing smaller.
+*/
 
 .dashboard-image {
   display: block;
@@ -359,13 +363,12 @@ DASHBOARD PREVIEW
   height: 100%;
   min-height: 470px;
   object-fit: cover;
-  object-position: center;
-  transform: scale(1.22);
+  object-position: center center;
   transition: transform 0.4s ease;
 }
 
 .dashboard-link:hover .dashboard-image {
-  transform: scale(1.26);
+  transform: scale(1.02);
 }
 
 .dashboard-overlay {
@@ -399,7 +402,7 @@ DASHBOARD PREVIEW
 }
 
 /* =====================================
-   PROJECT TAGS
+PROJECT TAGS
 ===================================== */
 
 .tags {
@@ -418,7 +421,7 @@ DASHBOARD PREVIEW
 }
 
 /* =====================================
-   PROJECT LINKS
+PROJECT LINKS
 ===================================== */
 
 .project-links {
@@ -436,7 +439,7 @@ DASHBOARD PREVIEW
 }
 
 /* =====================================
-   PROJECT OUTCOME
+PROJECT OUTCOME
 ===================================== */
 
 .project-outcome {
@@ -455,7 +458,7 @@ DASHBOARD PREVIEW
 }
 
 /* =====================================
-   KEY INSIGHTS
+KEY INSIGHTS
 ===================================== */
 
 .insights {
@@ -491,7 +494,7 @@ DASHBOARD PREVIEW
 }
 
 /* =====================================
-   PROJECT NOTE
+PROJECT NOTE
 ===================================== */
 
 .note {
@@ -501,33 +504,55 @@ DASHBOARD PREVIEW
 }
 
 /* =====================================
-   PAYSIM ALIGNMENT
+PAYSIM ALIGNMENT
 ===================================== */
 
 /*
-   Paysim is currently outside the
-   .projects-section in index.html.
-
-   These rules give it the same width,
-   horizontal alignment and spacing as
-   Cyclistic and Bellabeat.
+Paysim is outside the main projects section
+in the current index.html. These rules make
+it match the width and alignment of the
+Cyclistic and Bellabeat projects.
 */
 
 .paysim {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  width: calc(100% - 56px);
+  align-items: stretch;
+  width: 100%;
   max-width: 1184px;
   min-height: 470px;
   margin: 100px auto 0;
   padding: 0;
   background: #e5eadc;
+  overflow: hidden;
+}
+
+.paysim .project-visual {
+  min-height: 470px;
+  height: 100%;
+}
+
+.paysim .project-content {
+  min-height: 470px;
+  padding: 46px;
+}
+
+.paysim .project-type {
+  color: #56731a;
+}
+
+.paysim .dashboard-image {
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .paysim + .project-outcome,
 .paysim + .project-outcome + .insights,
 .paysim + .project-outcome + .insights + .note {
-  width: calc(100% - 56px);
+  width: 100%;
   max-width: 1184px;
   margin-left: auto;
   margin-right: auto;
@@ -545,17 +570,8 @@ DASHBOARD PREVIEW
   margin-bottom: 0;
 }
 
-/*
-   This makes the Paysim project type use
-   the same green colour as the other projects.
-*/
-
-.paysim .project-type {
-  color: #56731a;
-}
-
 /* =====================================
-   SPACE BETWEEN PROJECTS
+SPACE BETWEEN PROJECTS
 ===================================== */
 
 .note + .project-card {
@@ -563,7 +579,7 @@ DASHBOARD PREVIEW
 }
 
 /* =====================================
-   EXPERIENCE AND EDUCATION
+EXPERIENCE AND EDUCATION
 ===================================== */
 
 .journey {
@@ -603,7 +619,7 @@ DASHBOARD PREVIEW
 }
 
 /* =====================================
-   FOOTER
+FOOTER
 ===================================== */
 
 footer {
@@ -636,7 +652,7 @@ footer h2 {
 }
 
 /* =====================================
-   MOBILE RESPONSIVE
+MOBILE RESPONSIVE
 ===================================== */
 
 @media (max-width: 720px) {
@@ -689,7 +705,7 @@ footer h2 {
   .project-card,
   .paysim {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 0;
   }
 
   .skills-grid {
@@ -717,7 +733,9 @@ footer h2 {
     margin-top: 25px;
   }
 
-  .project-content {
+  .project-content,
+  .paysim .project-content {
+    min-height: auto;
     padding: 30px;
   }
 
@@ -726,17 +744,19 @@ footer h2 {
   }
 
   .project-visual,
-  .paysim .project-visual {
+  .project-dashboard,
+  .dashboard-link,
+  .dashboard-image,
+  .paysim .project-visual,
+  .paysim .dashboard-image {
     min-height: 280px;
+    height: 280px;
   }
 
   .dashboard-image,
   .paysim .dashboard-image {
-    width: 100%;
-    height: auto;
-    min-height: 0;
-    max-height: none;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center center;
   }
 
   .project-links {
@@ -757,7 +777,7 @@ footer h2 {
   .paysim {
     width: auto;
     max-width: none;
-    min-height: 0;
+    min-height: auto;
     margin: 70px 20px 0;
   }
 
