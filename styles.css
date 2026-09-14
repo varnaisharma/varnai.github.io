@@ -297,6 +297,7 @@ h2 {
 }
 
 .project-visual {
+  min-width: 0;
   min-height: 330px;
   background: #f4f4f1;
   overflow: hidden;
@@ -305,6 +306,7 @@ h2 {
 }
 
 .project-content {
+  min-width: 0;
   padding: 46px;
   display: flex;
   flex-direction: column;
@@ -332,6 +334,9 @@ h2 {
 ===================================== */
 
 .project-dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #f4f4f1;
   overflow: hidden;
   position: relative;
@@ -339,19 +344,52 @@ h2 {
 
 .dashboard-link {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .dashboard-image {
+  display: block;
   width: 100%;
   height: 100%;
   min-height: 470px;
   object-fit: contain;
   object-position: center;
-  display: block;
   transition: transform 0.4s ease;
+}
+
+/*
+   Paysim dashboard adjustment.
+
+   The Paysim image is wider than the available
+   project column, so it should always preserve
+   the complete image instead of being cropped.
+*/
+
+.paysim .project-visual {
+  min-width: 0;
+  min-height: 470px;
+  padding: 0;
+}
+
+.paysim .dashboard-link {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.paysim .dashboard-image {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .dashboard-link:hover .dashboard-image {
@@ -491,11 +529,11 @@ h2 {
 }
 
 /* =====================================
-   PAYSIM ALIGNMENT FIX
+   PAYSIM ALIGNMENT
 ===================================== */
 
 /*
-   Paysim is currently placed outside the
+   Paysim is currently outside the
    .projects-section in index.html.
 
    These rules give it the same width,
@@ -504,14 +542,20 @@ h2 {
 */
 
 .paysim {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  width: calc(100% - 56px);
   max-width: 1184px;
+  min-height: 470px;
   margin: 100px auto 0;
   padding: 0;
+  background: #e5eadc;
 }
 
 .paysim + .project-outcome,
 .paysim + .project-outcome + .insights,
 .paysim + .project-outcome + .insights + .note {
+  width: calc(100% - 56px);
   max-width: 1184px;
   margin-left: auto;
   margin-right: auto;
@@ -527,6 +571,15 @@ h2 {
 
 .paysim + .project-outcome + .insights + .note {
   margin-bottom: 0;
+}
+
+/*
+   This makes the Paysim project type use
+   the same green colour as the other projects.
+*/
+
+.paysim .project-type {
+  color: #56731a;
 }
 
 /* =====================================
@@ -661,7 +714,8 @@ footer h2 {
   }
 
   .split-section,
-  .project-card {
+  .project-card,
+  .paysim {
     grid-template-columns: 1fr;
     gap: 30px;
   }
@@ -699,8 +753,18 @@ footer h2 {
     font-size: 1.8rem;
   }
 
-  .dashboard-image {
+  .project-visual,
+  .paysim .project-visual {
     min-height: 280px;
+  }
+
+  .dashboard-image,
+  .paysim .dashboard-image {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
   }
 
   .project-links {
@@ -721,6 +785,7 @@ footer h2 {
   .paysim {
     width: auto;
     max-width: none;
+    min-height: 0;
     margin: 70px 20px 0;
   }
 
