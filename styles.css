@@ -801,3 +801,17 @@ MOBILE RESPONSIVE
     gap: 15px;
   }
 }
+
+.project-outcome,
+.insights {
+  color: #000;
+}
+
+.project-outcome h3,
+.insights h3,
+.project-outcome p,
+.insights p,
+.project-outcome li,
+.insights li {
+  color: #000;
+}
