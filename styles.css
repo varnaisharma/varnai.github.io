@@ -291,9 +291,10 @@ h2 {
 .project-card {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  background: #e5eadc;
-  min-height: 470px;
   width: 100%;
+  min-height: 470px;
+  background: #e5eadc;
+  align-items: stretch;
 }
 
 .project-visual {
@@ -334,10 +335,13 @@ DASHBOARD PREVIEW
 ===================================== */
 
 .project-dashboard {
-  background: #f4f4f1;
-  overflow: hidden;
   position: relative;
   min-height: 470px;
+  background: #f4f4f1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dashboard-link {
@@ -356,11 +360,12 @@ DASHBOARD PREVIEW
   min-height: 470px;
   object-fit: cover;
   object-position: center;
+  transform: scale(1.22);
   transition: transform 0.4s ease;
 }
 
 .dashboard-link:hover .dashboard-image {
-  transform: scale(1.02);
+  transform: scale(1.26);
 }
 
 .dashboard-overlay {
