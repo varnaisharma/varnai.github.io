@@ -913,3 +913,32 @@ footer h2 {
 .dashboard-link:hover .dashboard-overlay span {
   opacity: 1;
 }
+
+/* =====================================
+   PAYSIM PROJECT
+===================================== */
+
+.paysim .project-visual {
+  background: #ffffff;
+}
+
+.paysim .project-content {
+  background: #e8ecdf;
+}
+
+.paysim .project-type {
+  color: #172b85;
+}
+
+.paysim .project-content h3 {
+  color: #18211d;
+}
+
+.paysim .tags span {
+  border-color: #aab4a4;
+}
+
+.paysim .dashboard-image {
+  object-fit: contain;
+  background: #ffffff;
+}
