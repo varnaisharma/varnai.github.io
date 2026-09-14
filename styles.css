@@ -942,3 +942,47 @@ footer h2 {
   object-fit: contain;
   background: #ffffff;
 }
+
+/* =====================================
+   PAYSIM PROJECT
+===================================== */
+
+.paysim {
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.paysim .project-visual {
+  background: #ffffff;
+  min-height: 420px;
+}
+
+.paysim .project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px 72px;
+  background: #e8ecdf;
+}
+
+.paysim .dashboard-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.paysim .project-content h3 {
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.paysim .project-content p {
+  max-width: 560px;
+}
+
+.paysim .tags {
+  margin-top: 24px;
+}
+
+.paysim .project-links {
+  margin-top: 48px;
+}
